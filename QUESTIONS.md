@@ -18,6 +18,16 @@ Technical Interview Questions
 - Implement squareroot function
 - Implement an exponent function (bonus: now try in log(n) time)
 - Write a multiply function that multiples 2 integers without using *
+- Given n points, return the top k points that are closest to the origin
+- We’re going to find “Word Twins”, which are pairs of English words, at least 4 letters long, where the first three letters of one are the last three letters of another.  For example, “strategy” and “Egypt”.
+- Given a 3*3 matrix, and 1-8 numbers in random order, 1 place as space. 
+        Write code to find the min exchange of numbers to make the matrix in order.
+            
+            5 4 1           1 2 3
+            3   2   --->    8   4
+            7 8 6           7 6 5
+- There is k parenthesis, write code to calculate how many permutations could have. 
+    For 2 parenthesis, there is 2 permutations: ()() and (()).
 - **HARD**: Given a function rand5() that returns a random int between 0 and 5, implement rand7()
 - **HARD**: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s)
 
@@ -44,6 +54,7 @@ Technical Interview Questions
 - Print a tree by levels
 - Given a binary tree which is a sum tree, write an algorithm to determine whether the tree is a valid sum tree
 - Given a tree, verify that it contains a subtree.
+- Convert binary tree to doubly linked list
 - **HARD**: Find the max distance between 2 nodes in a BST.
 - **HARD**: Construct a BST given the pre-order and in-order traversal Strings
 
@@ -55,11 +66,6 @@ Technical Interview Questions
 - Implement a binary min heap. Turn it into a binary max heap
 - **HARD**: Implement a queue using 2 stacks
 
-
-
-
-
-
 **Linked Lists**
 - Implement a linked list (with insert and delete functions)
 - Find the Nth element in a linked list
@@ -70,6 +76,8 @@ Technical Interview Questions
     ```Ex. A-->B-->C --> D-->E -->C, C is the node that begins the loop```
 - Check whether a link list is a palindrome
 - Reverse a linked list iteratively and recursively
+- Given a linked list, where each node has a link to a random node in the list, make a copy of the entire list
+- Given a singly LL A->B->C->D->E->F... convert to B->A->D->C->F->E...
 
 **Sorting**
 - Implement bubble sort
@@ -112,6 +120,7 @@ Technical Interview Questions
 - Given a sorted array of n integers that has been rotated an unknown number of times, write code to find an element in the array. Sorted in increasing order
 
     ```Input: find 5 in (15, 16, 19, 20, 25, 1, 3, 4, 5, 6, 10, 14) Output 8```
+- Implement a simple regular expression matching function
 
 **Uncategorized**
 - Given a max-heap, how do I find the top k items?
@@ -157,3 +166,4 @@ Technical Interview Questions
 - Write a method to sort an array of strings so that all the anagrams are next to each other
 - Find an element in a sorted array that has been rotated an unknown number of times
 - Implement a method that returns true if the edit distance between two strings is less than 2 (1 or 0) or false otherwise
+- Given two lists of chars, return the first with removed characters that appear in the second list.
