@@ -1,6 +1,7 @@
 package rawDataStructure;
 
 
+
 public class LinkedList {
 
 	public Node head;

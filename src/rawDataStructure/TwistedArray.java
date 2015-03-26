@@ -6,6 +6,7 @@ public class TwistedArray {
 
 	public final int[] array;
 	public Function<Integer, Integer> get; //Wooho java8
+	public Function<Void, Integer> size;
 
 	public TwistedArray(int[] array) {
 		this.array = array;

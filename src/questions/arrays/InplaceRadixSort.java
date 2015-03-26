@@ -20,8 +20,11 @@ public class InplaceRadixSort implements IInterviewQuestion {
 		map.put(8, 'C');
 		map.put(9, 'C');
 
-		test.solve(new Input(map, new int[]{7, 4, 1}));
+		test.solve(new Input(map, new int[] {9, 2}));
+		test.solve(new Input(map, new int[] {9, 4}));
+		test.solve(new Input(map, new int[]{1, 7, 4}));
 		test.solve(new Input(map, new int[]{1, 2, 4, 3}));
+		test.solve(new Input(map, new int[]{9,8,7,6,5,4,3,2,1}));
 	}
 
 	@Override
@@ -65,19 +68,36 @@ public class InplaceRadixSort implements IInterviewQuestion {
 		System.out.println("Sorted array: " + Arrays.toString(array));
 	}
 
+	/**
+	 *
+	 * @param array
+	 * @param start
+	 * @param end
+	 * @param map
+	 * @param criterion
+	 * @return the first index at which the array element is not mapped to criterion (after the array has been sorted)
+	 */
 	private static int inplaceRadixSort(int[] array, int start, int end, HashMap<Integer, Character> map, char criterion) {
 		int left = start;
 		int right = end;
 
 		while (left < right) {
-			System.out.println("Doing " + left + ", " + right + " --> " + array[left]);
 			if (map.get(array[left]) == criterion) {//We're good. No need to do anything
 				left++;
 			} else {//Swap with array[right]
 				swap(array, left, right);
 				right--;
 			}
-			System.out.println("Final " + left + ", " + right);
+		}
+
+		//After the loop, we are sure that everything < left is mapped to criterion.
+		//We also know that everything > right is NOT mapped to criterion.
+		//Lastly, we know left >= right (which ends the while loop), so we just need to check
+		//if array[left] is mapped to criterion or not. If it is, just increment left by 1
+		if (left < array.length) {
+			if (map.get(array[left]) == criterion) {
+				left++;
+			}
 		}
 
 		return left;
