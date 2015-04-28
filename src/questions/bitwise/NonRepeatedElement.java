@@ -41,7 +41,7 @@ public class NonRepeatedElement implements IInterviewQuestion {
 			return;
 		}
 
-		int xor = 0; //Identity x ^ 1 = x so we choose this to start with
+		int xor = 0; //Identity x ^ 0 = x so we choose this to start with
 		for (int i : array) {
 			xor = xor ^ i;
 		}
